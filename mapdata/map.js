@@ -37,7 +37,7 @@ Main = (function() {
             tilt: 0
         },
         popup: {
-            dockEnabled: true,
+            dockEnabled: false,
             dockOptions: {
                 breakpoint: false
             }
@@ -67,11 +67,11 @@ Main = (function() {
                                 
             const markerSymbol = {                            
                 type: "simple-marker",                             
-                color: [0, 0, 255],                            
+                color: [255, 255, 0],                            
                 outline: {
                               
                     // autocasts as new SimpleLineSymbol()                              
-                    color: [255, 255, 255],                             
+                    color: [0, 0, 0],                             
                     width: 2
                             
                 }
@@ -82,7 +82,7 @@ Main = (function() {
                 geometry: point,                            
                 symbol: markerSymbol,                            
                 popupTemplate: {                                
-                    title: key + ": " + value.city + ", " + value.state                            
+                    title: value.city + ", " + value.state + " is the location of my " + key                           
                 }                  
             });
                           
