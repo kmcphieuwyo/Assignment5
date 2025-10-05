@@ -49,6 +49,20 @@ Main = (function() {
             }
         }
     });
+
+    view.when(() => {
+        view.on("click", (event) => {
+            const mapPoint = event.mapPoint;
+            if (!mapPoint) return;
+
+            view.goTo({
+                target: mapPoint,
+                scale: 500000
+            }, {
+                duration: 800
+            });
+        });
+    });
                 
     const initMap = function(){
                           
