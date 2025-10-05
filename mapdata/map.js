@@ -181,13 +181,11 @@ Main = (function() {
         if (input in cityLookup) {
             const [x, y] = cityLookup[input];
 
-        console.log("Zooming to:", x, y);
-
         view.goTo({
             position: {
                 x: x,
                 y: y,
-                z: 250000, 
+                z: 500000, 
                 spatialReference: { wkid: 4326 }
             },
             heading: 0,
